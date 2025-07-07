@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadani | Education Charity Platform</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Cadani</h1>
+      <nav>
+        <a href="#about" class="mr-4 hover:underline">About</a>
+        <a href="#donate" class="mr-4 hover:underline">Donate</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="py-12 text-center">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-semibold mb-4">Support a Student Today</h2>
+      <p class="text-lg text-gray-600 mb-6">Your donation helps pay school fees, provide accommodation, and pocket money for students in need.</p>
+      <a href="#donate" class="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700">Donate Now</a>
+    </div>
+  </section>
+
+  <section id="about" class="py-10 bg-white">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-bold mb-4">About Cadani</h3>
+      <p>Cadani is a charitable organization committed to supporting underprivileged students in accessing education by covering tuition fees, offering accommodation and providing pocket money. We believe in education as a powerful tool to break the cycle of poverty.</p>
+    </div>
+  </section>
+
+  <section id="donate" class="py-10 bg-gray-100">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-bold mb-4">Make a Donation</h3>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- M-Pesa Instructions -->
+        <div class="bg-white p-4 rounded shadow">
+          <h4 class="text-xl font-semibold mb-2">Donate via M-Pesa</h4>
+          <p class="text-gray-700 mb-2">Go to M-Pesa → Lipa na M-Pesa → Buy Goods</p>
+          <p class="text-gray-700 mb-2">Till Number: <strong>0725950069</strong></p>
+          <p class="text-gray-700">Enter the amount you wish to donate and complete the transaction.</p>
+        </div>
+
+        <!-- Stripe Form (test/demo) -->
+        <form class="bg-white p-4 rounded shadow" action="https://your-backend-url.onrender.com/pay/stripe" method="POST">
+          <h4 class="text-xl font-semibold mb-2">Donate by Card (Stripe)</h4>
+          <input type="number" name="amount" placeholder="Amount (USD)" class="w-full border p-2 mb-3" required>
+          <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded">Donate with Stripe</button>
+        </form>
+
+        <!-- PayPal Donate Button -->
+        <div class="bg-white p-4 rounded shadow text-center">
+          <h4 class="text-xl font-semibold mb-2">Donate via PayPal</h4>
+          <form action="https://www.paypal.com/donate" method="post" target="_blank">
+            <input type="hidden" name="business" value="ogolapeter874@gmail.com" />
+            <input type="hidden" name="currency_code" value="USD" />
+            <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600">Donate with PayPal</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-10 bg-white">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-bold mb-4">Contact Us</h3>
+      <form class="bg-gray-50 p-6 rounded shadow-md" action="https://your-backend-url.onrender.com/contact" method="POST">
+        <label class="block mb-2">Name</label>
+        <input type="text" name="name" class="w-full border p-2 mb-4" required>
+
+        <label class="block mb-2">Email</label>
+        <input type="email" name="email" class="w-full border p-2 mb-4" required>
+
+        <label class="block mb-2">Message</label>
+        <textarea name="message" class="w-full border p-2 mb-4" required></textarea>
+
+        <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-blue-600 text-white text-center p-4">
+    <p>&copy; 2025 Cadani. All rights reserved.</p>
+  </footer>
+</body>
+</html>
